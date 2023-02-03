@@ -1,0 +1,10 @@
+.site__footer{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+    section{
+        color: red;
+        width: 10rem;
+    }
+}

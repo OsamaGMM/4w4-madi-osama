@@ -369,7 +369,28 @@ p {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
+a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+a:visited {
+  color: none;
+}
+a:hover {
+  color: yellow;
+}
+
 /* --------------------------------------------- composant */
+.site__footer {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.site__footer section {
+  color: red;
+  width: 10rem;
+}
+
 body {
   background-color: rgb(0, 0, 0);
   color: white;
