@@ -384,11 +384,33 @@ a:hover {
 .site__footer {
   display: flex;
   justify-content: space-evenly;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 .site__footer section {
-  color: red;
+  flex: 1 1 auto;
+  color: rgb(28, 223, 35);
   width: 10rem;
+  text-align: center;
+}
+
+.site__header .site___header__logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-entete-container .menu {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+}
+.menu-entete-container .menu .menu-item {
+  font-size: 18px;
+  color: yellow;
+}
+.menu-entete-container .menu a {
+  display: block;
+  padding: 5px 20px;
 }
 
 body {
