@@ -1,6 +1,6 @@
 @import "../variables/dimension";
 .liste-articles{
-    //Ajout de media queries pour le responsive
+    //Ajout de media queries pour le responsive!
     //Il y a une meilleur facon de faire avec des @mixin
     //tablette
     @media (min-width: $largeur__tablette) {
@@ -10,7 +10,7 @@
     @media (min-width: $largeur__ordi) {
         grid-template-columns: 1fr 1fr 1fr;
     }
-    
+
     //mobile first
     display: grid;
     grid-template-columns: 1fr;
