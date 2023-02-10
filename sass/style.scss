@@ -17,17 +17,14 @@ Text Domain: 2023 4w4 Osama Madi
 
 /* --------------------------------------------- base */
 @import "base/heading";
+@import "base/body";
 // @import "base/espacement";
 @import "base/link";
 // @import "base/list";
 
 /* --------------------------------------------- composant */
-@import "composant/pied2page";
 @import "composant/site-entete";
+@import "composant/front-page";
+@import "composant/pied2page";
 
-
-body{
-    background-color: rgb(0, 0, 0);
-    color: white;
-}
 

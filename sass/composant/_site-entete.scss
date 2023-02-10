@@ -2,18 +2,15 @@
 
 .site___header__logo{
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
-}
-
 
 .menu-entete-container{
     .menu{
         display: flex;
         list-style: none;
         justify-content: flex-end;
-
         .menu-item{
             font-size: 18px;
             color: yellow;
@@ -23,5 +20,5 @@
             padding: 5px 20px;
         }
     }
-
+}
 }

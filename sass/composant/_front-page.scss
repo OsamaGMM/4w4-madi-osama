@@ -1,0 +1,43 @@
+@import "../variables/dimension";
+.liste-articles{
+    //Ajout de media queries pour le responsive
+    //Il y a une meilleur facon de faire avec des @mixin
+    //tablette
+    @media (min-width: $largeur__tablette) {
+        grid-template-columns: 1fr 1fr;
+    }
+    //ordi
+    @media (min-width: $largeur__ordi) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    //mobile first
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 2rem;
+
+
+    //style de chaque article
+    .article{
+        @media (min-width: $largeur__tablette) {
+            max-width: 40vw;
+        }
+        @media (min-width: $largeur__ordi) {
+            max-width: 25vw;
+        }
+        width: 50vw;
+        height: 25rem;
+        background-color: rgb(87, 87, 237);
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px rgb(95, 95, 252);
+        color: white;
+        h1{
+            text-align: center;
+        }
+        .excerpt{
+            text-align: center;
+        }
+    }
+
+}

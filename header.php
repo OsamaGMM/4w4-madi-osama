@@ -18,6 +18,6 @@
                 'container' => 'nav'
             )) ?>
         </section>
-        <h1><a href="<?= bloginfo('url') ?>"> <?= bloginfo('name') ?></a></h1>
+        <h1><a href="<?= bloginfo('url') ?>"></a></h1>
         <h2> <?= bloginfo('description') ?></h2>
     </header>

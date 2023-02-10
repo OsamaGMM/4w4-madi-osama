@@ -1,4 +1,4 @@
-# Laboratoire 1
+# Exercice 1
 ## 4W4 Conception d'interface et developpement Web
 ### Author: Osama Madi
 #### Desc:
