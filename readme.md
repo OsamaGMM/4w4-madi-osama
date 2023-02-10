@@ -6,6 +6,8 @@
 - Creation d'un theme simple
 - Creation d'un depot Git local
 - Creation d'un depot Github
+- Creation de fichier sass
+- Style de la page front-page
 
 #### Reference
 https://support.beanstalkapp.com/article/16-how-do-i-rename-an-existing-git-remote
