@@ -8,6 +8,7 @@
 - Creation d'un depot Github
 - Creation de fichier sass
 - Style de la page front-page
+- Style du fichier markdown
 
 #### Reference
 https://support.beanstalkapp.com/article/16-how-do-i-rename-an-existing-git-remote
