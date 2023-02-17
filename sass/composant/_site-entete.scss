@@ -1,24 +1,71 @@
-.site__header{
-
-.site___header__logo{
+.site__header {
+  .site__header__logo {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  .toggle-nav {
+    border: 1px solid black;
+  }
+
+  a.toggle-nav {
+    margin: 0 0 0.5em 0.5em;
+    display: inline-block !important;
+    transition: color linear 0.15s;
+  }
+
+  a.toggle-nav:hover,
+  a.toggle-nav:active {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .menu-header {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    width: 100%;
+  }
+
+  #access .menu-header ul {
+    display: none;
+    position: absolute;
+    top: 80%;
+    right: 0px;
+    min-width: 200px;
+    background-color: #7b3d84;
+    font-size: 1.2em;
+  }
+
+  #access .menu-header li {
+    display: block;
+    float: none;
+    padding-right: 2%;
+    text-align: right;
+  }
+  #access ul li:hover > ul {
+    display: none;
+  }
 }
 
-.menu-entete-container{
-    .menu{
-        display: flex;
-        list-style: none;
-        justify-content: flex-end;
-        .menu-item{
-            font-size: 18px;
-            color: yellow;
-        }
-        a{
-            display: block;
-            padding: 5px 20px;
-        }
+.menu-entete-container {
+  .menu {
+    display: none;
+    list-style: none;
+    justify-content: flex-end;
+    border: 1px solid black;
+    @media (min-width: $largeur__tablette) {
+      display: flex;
     }
-}
+
+    .menu-item {
+      font-size: 18px;
+      color: yellow;
+    }
+    a {
+      display: block;
+      padding: 5px 20px;
+    }
+  }
 }

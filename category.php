@@ -10,9 +10,7 @@
                 <!-- the_content();?> -->
                 <?php //the_excerpt(); //affiche un resume de l'article?>
                 <p class="excerpt"><?= wp_trim_words(get_the_excerpt(), 7, "icon") ?>...</p>
-                
             </div>
-
     <?php endwhile;
     endif;
     ?>
