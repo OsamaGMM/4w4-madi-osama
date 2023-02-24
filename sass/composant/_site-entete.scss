@@ -1,9 +1,14 @@
 .site__header {
+  margin-bottom: 2rem;
+
   .site__header__logo {
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
+
+    background-color:rgb(42, 117, 192);
+
   }
 
   a.toggle-nav {

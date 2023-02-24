@@ -369,22 +369,23 @@ p {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
-h1, h2, h3 {
+.single {
+  background-color: aqua;
+}
+.single h1, .single h2, .single h3 {
   text-align: center;
 }
-
-li {
-  color: red;
-  list-style: none;
-  font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.1rem);
-  margin: 5px;
+.single ul {
+  padding-left: 1.5rem;
 }
-
-p {
+.single li {
+  font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.1rem);
+  margin: 8px;
+}
+.single p {
   margin: 15px;
 }
-
-pre {
+.single pre {
   text-align: center;
   background-color: rgb(237, 237, 94);
   border-radius: 2rem;
@@ -408,11 +409,15 @@ a:hover {
 }
 
 /* --------------------------------------------- composant */
+.site__header {
+  margin-bottom: 2rem;
+}
 .site__header .site__header__logo {
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
+  background-color: rgb(42, 117, 192);
 }
 .site__header a.toggle-nav {
   margin: 0 0 0.5em 0.5em;
@@ -470,9 +475,10 @@ a:hover {
 .liste-articles .article {
   width: 50vw;
   height: 15rem;
-  background-color: rgb(87, 87, 237);
+  background-color: rgb(42, 117, 192);
+  border: 3px solid black;
   border-radius: 10px;
-  box-shadow: 5px 5px 10px rgb(95, 95, 252);
+  box-shadow: 5px 5px 10px rgb(253, 189, 199);
   color: white;
 }
 @media (min-width: 700px) {

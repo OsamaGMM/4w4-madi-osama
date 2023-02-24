@@ -1,18 +1,27 @@
-h1,h2,h3{
-    text-align: center;
+.single{
+    background-color: aqua;
+
+    h1,h2,h3{
+        text-align: center;
+    }
+    ul{
+        padding-left: 1.5rem;
+    }
+    li{
+        
+        font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.1rem);
+        margin: 8px;
+    }
+    p{
+        margin: 15px;
+    }
+    pre{
+        text-align: center;
+        background-color: rgb(237, 237, 94);
+        border-radius: 2rem;
+    }
+
+
+
 }
 
-li{
-    color: red;
-    list-style:none;
-    font-size: clamp(0.5rem, 0.125rem + 1.2vw, 1.1rem);
-    margin: 5px;
-}
-p{
-    margin: 15px;
-}
-pre{
-    text-align: center;
-    background-color: rgb(237, 237, 94);
-    border-radius: 2rem;
-}

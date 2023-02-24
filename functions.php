@@ -47,7 +47,7 @@ function cidweb_modifie_requete_principal( $query ) {
       $query->set( 'orderby', 'title' );
       $query->set( 'order', 'ASC' );
       }
-     }
+    }
      add_action( 'pre_get_posts', 'cidweb_modifie_requete_principal' );
 
 
