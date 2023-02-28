@@ -23,15 +23,9 @@
                     et je gere les caractere a enlever dependament dans quelle page on est
                     : TIM = 7 car; NDC = 3 car -->
                         <!-- Il faut que je check c quoi les caractere si c un "0" j'enleve -->
+                        <!-- Pour les cours je garde le sigle au debut et je montre le titre au complet quand on clique dedant -->
                         <?= (is_category('Cours du TIM')) ? substr(wp_trim_words(get_the_title(), 10, ""), 7)
-                            : substr(wp_trim_words(get_the_title(), 10, ""), 1) ?>
-                        <?php
-                        $search = '';
-                            function str_replace_json($search, $replace, $subject)
-                            {
-                                return json_decode(str_replace($search, $replace,  json_encode($subject)));
-                            }
-                        ?>
+                        : substr(wp_trim_words(get_the_title(), 10, ""), 1) ?>
                     </a>
                 </h1>
                 <!-- the_content();?> -->

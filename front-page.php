@@ -1,9 +1,21 @@
-<?php
 
-?>
 <?php get_header(); ?>
+
+<main class="intro">
+
+    <div class="img">
+        <img id="imgTest" src="wp-content/uploads/test.jpg" alt="">
+
+    </div>
+    <div class="absolute">
+    <p class="text"><strong>Bienvenue</strong><br> sur le site<br> du TIM  </p>
+    <button>Visiter</button>
+    </div>
+</main>
+
+
+
 <main class="liste-articles">
-    Front-PAGEGEGEGE
     <?php if (have_posts()) :
         while (have_posts()) : the_post(); ?>
             <div class='article'>
@@ -16,4 +28,5 @@
     endif;
     ?>
 </main>
+
 <?php get_footer(); ?>

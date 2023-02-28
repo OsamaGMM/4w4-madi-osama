@@ -9,7 +9,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body class="site">
     
     <header class="site__header">
         <section class="site__header__logo">
@@ -25,3 +25,13 @@
         </section>
 
     </header>
+
+    <!-- <aside class="site__aside">
+        <h3>MENU ASIDE</h3>
+        <?php
+            // wp_nav_menu(array(
+            //     'menu' => 'aside',
+            //     'container' => 'nav'
+            // ))
+        ?>
+    </aside> -->
