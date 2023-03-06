@@ -1,32 +1,37 @@
 
 <?php get_header(); ?>
 
-<main class="intro">
+<section class="intro">
 
-    <div class="img">
-        <img id="imgTest" src="wp-content/uploads/test.jpg" alt="">
+<!-- exemple de front-page -->
 
+    <div class="intro-img-container">
+        <img src="wp-content/uploads/2023/03/test.jpg" alt="">
     </div>
-    <div class="absolute">
-    <p class="text"><strong>Bienvenue</strong><br> sur le site<br> du TIM  </p>
-    <button>Visiter</button>
+
+    <div class="intro-text">
+        <p class="text">Bienvenue<br> sur le site<br> du TIM  </p>
+        <button>Visiter</button>
     </div>
-</main>
 
 
+</section>
 
-<main class="liste-articles">
-    <?php if (have_posts()) :
-        while (have_posts()) : the_post(); ?>
-            <div class='article'>
-                <h1> <a href="<?= get_permalink(); ?>"> <?= wp_trim_words( get_the_title(), 2 )?> </a> </h1>
-                <!-- the_content();?> -->
-                <?php //the_excerpt(); //affiche un resume de l'article?>
-                <p class="excerpt"><?= wp_trim_words(get_the_excerpt(), 7, "") ?>...</p>
-            </div>
-    <?php endwhile;
-    endif;
+<section class="liste-articles">
+<?php
+
+        if (have_posts()): 
+            while (have_posts()) : the_post(); 
+                    $ma_categorie = "4w4";
+                    if (in_category('galerie')){
+                        $ma_categorie = "galerie";  
+                    }    
+                 get_template_part("template-parts/categorie", $ma_categorie);
+      
+             endwhile;
+        endif;    
+
     ?>
-</main>
+</section>
 
 <?php get_footer(); ?>

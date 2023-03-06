@@ -15,24 +15,9 @@
 
     if ($query->have_posts()) :
         while ($query->have_posts()) : $query->the_post(); ?>
-            <div class='article'>
-                <h1>
-                    <a href="<?= get_permalink(); ?>">
-                        <!-- Jai seulement deux cat pour l'instant
-                    donc je check si cest cours du tim ou note de cours
-                    et je gere les caractere a enlever dependament dans quelle page on est
-                    : TIM = 7 car; NDC = 3 car -->
-                        <!-- Il faut que je check c quoi les caractere si c un "0" j'enleve -->
-                        <!-- Pour les cours je garde le sigle au debut et je montre le titre au complet quand on clique dedant -->
-                        <?= (is_category('Cours du TIM')) ? substr(wp_trim_words(get_the_title(), 10, ""), 7)
-                        : substr(wp_trim_words(get_the_title(), 10, ""), 1) ?>
-                    </a>
-                </h1>
-                <!-- the_content();?> -->
-                <?php //the_excerpt(); //affiche un resume de l'article
-                ?>
-                <p class="excerpt"><?= wp_trim_words(get_the_excerpt(), 20, "") ?>...</p>
-            </div>
+
+        <?= get_template_part('template-parts/categorie', $category->slug) ?>
+
     <?php endwhile;
     endif;
     wp_reset_postdata(); ?>

@@ -12,6 +12,9 @@ function ajouter_styles()
 add_action('wp_enqueue_scripts', 'ajouter_styles');
 
 
+
+
+/* ----------------------------------- Enregistrement des menus */
 if (!function_exists('enregistrement_nav_menu')) {
 
     function enregistrement_nav_menu()
@@ -24,9 +27,23 @@ if (!function_exists('enregistrement_nav_menu')) {
     add_action('after_setup_theme', 'enregistrement_nav_menu', 0);
 }
 
+/* ----------------------------------- Modification des choix de menu « cours » */
+function personnalisation_menu_item_title($title, $item, $args)
+{
+    // Remplacer 'cours' par l'identifiant de votre menu
+    if ($args->menu == 'cours') {
+        // Modifier la longueur du titre en fonction de vos besoins
+        $title = wp_trim_words($title, 3, ' ... '); // on garde uniquement trois mots pour le titre du choix
+    }
+    return $title;
+}
+add_filter('nav_menu_item_title', 'personnalisation_menu_item_title', 10, 3);
+
+
 // Add theme support
 add_theme_support('title-tag');
-add_theme_support('custom-logo',
+add_theme_support(
+    'custom-logo',
     array(
         'height' => '150',
         'width' => '150'
@@ -41,20 +58,21 @@ add_theme_support('post-thumbnail');
  * Dans ce cas çi nous filtrons la requête de la page d'accueil
  * @param WP_query  $query la requête principal de WP
  */
-function cidweb_modifie_requete_principal( $query ) {
-    if ( $query->is_home() && $query->is_main_query() && ! is_admin() ) {
-      $query->set( 'category_name', '4w4' );
-      $query->set( 'orderby', 'title' );
-      $query->set( 'order', 'ASC' );
-      }
+function cidweb_modifie_requete_principal($query)
+{
+    if ($query->is_home() && $query->is_main_query() && !is_admin()) {
+        $query->set('category_name', '4w4');
+        $query->set('orderby', 'title');
+        $query->set('order', 'ASC');
     }
-     add_action( 'pre_get_posts', 'cidweb_modifie_requete_principal' );
+}
+add_action('pre_get_posts', 'cidweb_modifie_requete_principal');
 
 
 ////    MENUU DEROULANT
-     function tutsplus_burger_menu_scripts() {
-    
-        wp_enqueue_script( 'burger-menu-script', get_stylesheet_directory_uri() . '/scripts/burger-menu.js', array( 'jquery' ) );
-     
-    }
-    add_action( 'wp_enqueue_scripts', 'tutsplus_burger_menu_scripts' );
+function tutsplus_burger_menu_scripts()
+{
+
+    wp_enqueue_script('burger-menu-script', get_stylesheet_directory_uri() . '/scripts/burger-menu.js', array('jquery'));
+}
+add_action('wp_enqueue_scripts', 'tutsplus_burger_menu_scripts');

@@ -30,7 +30,8 @@
         <h3>MENU ASIDE</h3>
         <?php
             // wp_nav_menu(array(
-            //     'menu' => 'aside',
+            //     'menu' => 'aside', on peut avoir un menu qui change d'apres la page dans laquelle on est
+            //   *************exemple si on est dans cours on a le menu que pour les cours
             //     'container' => 'nav'
             // ))
         ?>

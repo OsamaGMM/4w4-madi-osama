@@ -1,0 +1,21 @@
+    //style de chaque article
+    .article{
+        @media (min-width: $largeur__tablette) {
+            max-width: 40vw;
+        }
+        @media (min-width: $largeur__ordi) {
+            max-width: 25vw;
+        }
+        width: 50vw;
+        background-color: rgb(42, 117, 192);
+        border: 3px solid black;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px rgb(253, 189, 199);
+        color: white;
+        h1{
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+    }
