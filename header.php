@@ -9,8 +9,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body class="site" <?= (is_front_page() ? 'no-aside' : '') ?>>
-    
+<body class="site <?= (is_front_page() ? 'no-aside' : '') ?>">
     <header class="site__header">
         <section class="site__header__logo">
             <div class="logo"><?php the_custom_logo() ?></div>
