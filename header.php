@@ -9,7 +9,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body class="site">
+<body class="site" <?= (is_front_page() ? 'no-aside' : '') ?>>
     
     <header class="site__header">
         <section class="site__header__logo">
@@ -19,20 +19,18 @@
                 'menu' => 'entete',
                 'container' => 'nav'
             )) ?>
+
             <?php get_search_form() ?>
+
             <a class="toggle-nav" href='#'>&#9776;</a>
             </div>
+
         </section>
 
     </header>
-
-    <!-- <aside class="site__aside">
-        <h3>MENU ASIDE</h3>
-        <?php
-            // wp_nav_menu(array(
-            //     'menu' => 'aside', on peut avoir un menu qui change d'apres la page dans laquelle on est
-            //   *************exemple si on est dans cours on a le menu que pour les cours
-            //     'container' => 'nav'
-            // ))
-        ?>
-    </aside> -->
+    
+    <?php 
+        if ( ! is_front_page()){
+        get_template_part("template-parts/aside"); 
+        }
+    ?>

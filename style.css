@@ -495,56 +495,6 @@ a:hover {
   }
 }
 
-.intro {
-  display: grid;
-  grid-template-columns: 1fr;
-  position: relative;
-}
-@media (min-width: 700px) {
-  .intro {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-.intro .intro-img-container {
-  width: 100%;
-  height: 80vh;
-}
-.intro .intro-img-container img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-.intro .intro-text {
-  position: absolute;
-}
-@media (min-width: 700px) {
-  .intro .intro-text {
-    position: initial;
-  }
-}
-.intro .intro-text .text {
-  padding-left: 0;
-  font-size: clamp(3rem, 2.7391rem + 1.3043vw, 6rem);
-  color: white;
-}
-@media (min-width: 700px) {
-  .intro .intro-text .text {
-    color: black;
-  }
-}
-@media (min-width: 1024px) {
-  .intro .intro-text .text {
-    color: black;
-  }
-}
-.intro #imgTest {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  -webkit-mask-image: linear-gradient(black, transparent);
-  mask-image: linear-gradient(black, transparent);
-}
-
 .site__footer {
   display: flex;
   justify-content: space-evenly;
@@ -556,4 +506,39 @@ a:hover {
   color: rgb(28, 223, 35);
   width: 10rem;
   text-align: center;
+}
+
+.site {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas: "header" "aside" "main" "footer";
+}
+@media screen and (min-width: 1000px) {
+  .site {
+    grid-template-areas: "header header" "aside main" "footer footer";
+  }
+}
+
+.site__header {
+  grid-area: header;
+}
+
+.site__main {
+  grid-area: main;
+  overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+}
+
+.site__aside {
+  grid-area: aside;
+  background-color: grey;
+}
+
+.no-aside {
+  grid-template-areas: "header" "main" "footer";
+}
+@media screen and (min-width: 1000px) {
+  .no-aside {
+    grid-template-columns: auto;
+    grid-template-areas: "header" "main" "footer";
+  }
 }

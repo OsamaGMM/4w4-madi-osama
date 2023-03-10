@@ -1,35 +1,46 @@
-// .site {
-//     display: grid;
-//     grid-template-columns: auto;
-//     grid-template-areas:
-//       "header"
-//       "aside"
-//       "main"
-//       "footer";
-//     row-gap: 50px;
-
-//     @media (min-width : 768px) {
-//         grid-template-columns: 20% auto;
-//         grid-template-areas:
-//         "header header"
-//         "aside main"
-//         // ". main" => pas necessaire
-//         "footer footer";
-//     }
-
-//   }
-//   .site__header {
-//     grid-area: header;
-//     padding: 1rem clamp(1rem, 3vw, 20rem);
-//     background-color: antiquewhite;
-//   }
+.site {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas:
+    "header"
+    "aside"
+    "main"
+    "footer";
+  // row-gap: 50px;
   
-//   .site__main {
-//     grid-area: main;
-//     overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
-//   }
+  @media screen and (min-width: 1000px) {
+      grid-template-areas:
+      "header header"
+      "aside main"
+     /*  ". main" */
+      "footer footer";
+  }
+}
+
+  .site__header {
+    grid-area: header;
+  }
   
-//   .site__aside {
-//       grid-area: aside;
-//       background-color: grey;
-//   }
+  .site__main {
+    grid-area: main;
+    overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+  }
+  
+  .site__aside {
+      grid-area: aside;
+      background-color: grey;
+  }
+
+  .no-aside {
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+    @media screen and (min-width: 1000px) {
+      grid-template-columns: auto;
+      grid-template-areas:
+      "header"
+      "main"
+      "footer";
+    }
+  }
