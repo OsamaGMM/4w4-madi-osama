@@ -15,6 +15,16 @@
     grid-template-columns: 1fr;
     justify-items: center;
     gap: 2rem;
-
 }
+
+.galerie{
+
+    @media (min-width: $largeur__tablette) {
+        grid-column: 1/3;
+    }
+    @media (min-width: $largeur__ordi) {
+        grid-column: 1/4;
+    }
+}
+
 

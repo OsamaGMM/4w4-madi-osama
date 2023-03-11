@@ -19,3 +19,19 @@
             text-align: center;
         }
     }
+
+    .galerie{
+        grid-row: 1;
+        grid-template-columns: 1fr;
+        @media (min-width: $largeur__tablette) {
+            grid-template-columns: 1fr 1fr;
+        }
+        @media (min-width: $largeur__tablette) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    figure.is-layout-flex{
+        //Enlever le wrap des photos
+        flex-wrap: nowrap;
+    }

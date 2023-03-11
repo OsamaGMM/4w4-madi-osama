@@ -478,6 +478,25 @@ a:hover {
   text-align: center;
 }
 
+.galerie {
+  grid-row: 1;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 700px) {
+  .galerie {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 700px) {
+  .galerie {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+figure.is-layout-flex {
+  flex-wrap: nowrap;
+}
+
 .liste-articles {
   display: grid;
   grid-template-columns: 1fr;
@@ -492,6 +511,17 @@ a:hover {
 @media (min-width: 1024px) {
   .liste-articles {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 700px) {
+  .galerie {
+    grid-column: 1/3;
+  }
+}
+@media (min-width: 1024px) {
+  .galerie {
+    grid-column: 1/4;
   }
 }
 
