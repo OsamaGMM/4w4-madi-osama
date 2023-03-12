@@ -14,7 +14,7 @@
         <section class="site__header__logo">
             <div class="logo"><?php the_custom_logo() ?></div>
 
-            <div>
+            <div class="container-menu">
                 <input type="checkbox" id="checkbox-menu">
                 <?php wp_nav_menu(array(
                     'menu' => 'entete',
