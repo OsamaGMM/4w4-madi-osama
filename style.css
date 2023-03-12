@@ -413,7 +413,6 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
   background-color: rgb(42, 117, 192);
 }
 
@@ -448,10 +447,6 @@ a:hover {
 .menu-entete-container .menu .menu-item {
   font-size: 18px;
   color: yellow;
-}
-.menu-entete-container .menu a {
-  display: block;
-  padding: 5px 20px;
 }
 
 .article {
@@ -537,6 +532,23 @@ figure.is-layout-flex {
   color: rgb(28, 223, 35);
   width: 10rem;
   text-align: center;
+}
+
+/* ------------------------------------------ Bouton burger */
+.burger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+}
+@media screen and (min-width: 700px) {
+  .burger {
+    display: none;
+  }
+}
+
+#checkbox-menu {
+  display: none;
 }
 
 .site {
