@@ -10,36 +10,36 @@
     background-color:rgb(42, 117, 192);
 
   }
-
-  a.toggle-nav {
-    margin: 0 0 0.5em 0.5em;
-    transition: color linear 0.15s;
-    display: inline-block;
-    border: 1px solid black;
-
-    @media (min-width: $largeur__tablette) {
-      display: none;
-    }
-
-  }
-
-  a.toggle-nav:hover,
-  a.toggle-nav:active {
-    text-decoration: none;
-    color: blue;
-  }
   
 }
 
+  #checkbox-menu:checked ~ .menu-entete-container  {
+    transform: translateX(0);
+  }
+
+
 .menu-entete-container {
+
+  transform : translateX(300px);
+  transition : transform .5s;
+  @media screen and (min-width:$largeur__tablette) {
+      transform : translateX(0);
+  }
+
   .menu {
-    display: none;
-    list-style: none;
+    display : flex;
+    flex-direction: column; 
+    align-items: flex-end;
     justify-content: flex-start;
+
+    list-style: none;
     border: 1px solid black;
-    @media (min-width: $largeur__tablette) {
-      display: flex;
-    }
+
+    @media screen and (min-width : $largeur__tablette ){
+      flex-direction: row; 
+      align-items: center;
+      justify-content: flex-end;
+   }
 
     .menu-item {
       font-size: 18px;

@@ -416,32 +416,33 @@ a:hover {
   position: relative;
   background-color: rgb(42, 117, 192);
 }
-.site__header a.toggle-nav {
-  margin: 0 0 0.5em 0.5em;
-  transition: color linear 0.15s;
-  display: inline-block;
-  border: 1px solid black;
-}
-@media (min-width: 700px) {
-  .site__header a.toggle-nav {
-    display: none;
-  }
-}
-.site__header a.toggle-nav:hover,
-.site__header a.toggle-nav:active {
-  text-decoration: none;
-  color: blue;
+
+#checkbox-menu:checked ~ .menu-entete-container {
+  transform: translateX(0);
 }
 
+.menu-entete-container {
+  transform: translateX(300px);
+  transition: transform 0.5s;
+}
+@media screen and (min-width: 700px) {
+  .menu-entete-container {
+    transform: translateX(0);
+  }
+}
 .menu-entete-container .menu {
-  display: none;
-  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   justify-content: flex-start;
+  list-style: none;
   border: 1px solid black;
 }
-@media (min-width: 700px) {
+@media screen and (min-width: 700px) {
   .menu-entete-container .menu {
-    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
   }
 }
 .menu-entete-container .menu .menu-item {
