@@ -18,6 +18,7 @@
 }
 
 .galerie{
+    margin: 10px 10px;
 
     @media (min-width: $largeur__tablette) {
         grid-column: 1/3;
