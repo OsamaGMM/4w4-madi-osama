@@ -1,45 +1,42 @@
 .site__header {
   // margin-bottom: 2rem;
+  overflow: hidden;
 
-  .site__header__logo {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    background-color: rgb(42, 117, 192);
-  }
-}
-//Mon container
-.container-menu {
   display: flex;
-}
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(42, 117, 192);
 
-#checkbox-menu:checked ~ .menu-entete-container {
-  transform: translateX(0);
-}
-.menu-entete-container {
-  transform: translateX(300px);
-  transition: transform 0.5s;
-  @media screen and (min-width: $largeur__tablette) {
+  #checkbox-menu:checked ~ .menu-entete-container {
     transform: translateX(0);
+    display: block;
   }
 
-  .menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    list-style: none;
-
+  .menu-entete-container {
+    transform: translateX(300px);
+    transition: transform 0.5s;
     @media screen and (min-width: $largeur__tablette) {
-      flex-direction: row;
-      align-items: center;
-      justify-content: flex-end;
+      transform: translateX(0);
     }
 
-    .menu-item {
-      font-size: 18px;
-      margin: 5px 15px;
+    .menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      list-style: none;
+
+      @media screen and (min-width: $largeur__tablette) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+      }
+
+      .menu-item {
+        font-size: 18px;
+        margin: 5px 15px;
+        border-bottom: 1px solid;
+      }
     }
   }
 }

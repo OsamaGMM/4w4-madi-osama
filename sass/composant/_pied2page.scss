@@ -1,16 +1,13 @@
-
-    .menu-footer-container{
-
-        .menu{
-            display: flex;
-            justify-content: space-evenly;
-            list-style: none;
-            padding: 0;
-        }
-        .menu-item{
-            &::before{
-                content: "@ ";
-            }
-        }
-
+.menu-footer-container {
+  .menu {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 0;
+  }
+  .menu-item {
+    &::before {
+      content: "@ ";
     }
+  }
+}
