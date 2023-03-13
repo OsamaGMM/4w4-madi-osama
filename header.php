@@ -16,19 +16,15 @@
             <div class="logo"><?php the_custom_logo() ?></div>
         </section>
 
-                <input type="checkbox" id="checkbox-menu">
-                <?php wp_nav_menu(array(
-                    'menu' => 'entete',
-                    'container' => 'nav'
-                )) ?>
-                <?php get_search_form() ?>
-                <label class="burger" for="checkbox-menu">
-                    <img src="https://s2.svgbox.net/hero-outline.svg?ic=menu&color=000" width="20" height="20">
-          
-                </label>
-                
-
-
+        <input type="checkbox" id="checkbox-menu">
+        <?php wp_nav_menu(array(
+            'menu' => 'entete',
+            'container' => 'nav'
+        )) ?>
+        <?php get_search_form() ?>
+        <label class="burger" for="checkbox-menu">
+            <img src="https://s2.svgbox.net/hero-outline.svg?ic=menu&color=000" width="20" height="20">
+        </label>
     </header>
 
     <?php
