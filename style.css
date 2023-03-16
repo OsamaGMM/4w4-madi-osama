@@ -390,7 +390,7 @@ body {
 }
 
 a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 a:visited {
@@ -408,17 +408,6 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   background-color: rgb(42, 117, 192);
-}
-.site__header a {
-  color: white;
-}
-.site__header .recherche {
-  display: none;
-}
-@media (min-width: 600px) {
-  .site__header .recherche {
-    display: block;
-  }
 }
 .site__header #checkbox-menu:checked ~ .menu-entete-container {
   transform: translateX(0);
@@ -523,14 +512,28 @@ figure.is-layout-flex {
   overflow: hidden;
 }
 
-.menu-footer-container .menu {
+.site__footer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  height: 5rem;
+  background-color: rgb(42, 117, 192);
+}
+.site__footer .menu-footer-container {
+  flex-grow: 1;
+}
+.site__footer .menu-footer-container .menu {
   display: flex;
   justify-content: space-evenly;
   list-style: none;
   padding: 0;
 }
-.menu-footer-container .menu-item::before {
-  content: "@ ";
+.site__footer .menu-footer-container .menu-item {
+  text-decoration: underline;
+}
+.site__footer .recherche {
+  margin: 1rem;
 }
 
 /* ------------------------------------------ Bouton burger */
@@ -557,6 +560,9 @@ figure.is-layout-flex {
   .site__aside {
     display: block;
   }
+}
+.site__aside a {
+  color: black;
 }
 .site__aside h3 {
   text-align: center;

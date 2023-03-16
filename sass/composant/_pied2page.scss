@@ -1,13 +1,28 @@
-.menu-footer-container {
-  .menu {
-    display: flex;
-    justify-content: space-evenly;
-    list-style: none;
-    padding: 0;
-  }
-  .menu-item {
-    &::before {
-      content: "@ ";
+.site__footer{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  height: 5rem;
+
+  background-color: rgb(42, 117, 192);
+
+  .menu-footer-container {
+    flex-grow: 1;
+    .menu {
+      display: flex;
+      justify-content: space-evenly;
+      list-style: none;
+      padding: 0;
+    }
+    .menu-item {
+      text-decoration: underline;
     }
   }
+  .recherche{
+    margin: 1rem;
+  }
+
 }
+
+

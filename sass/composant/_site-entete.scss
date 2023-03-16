@@ -6,16 +6,6 @@
   align-items: center;
   justify-content: space-between;
   background-color: rgb(42, 117, 192);
-  a{
-    color: white;
-  }
-
-  .recherche{
-    display: none;
-    @media (min-width : 600px) {
-      display: block;
-    }
-  }
 
   #checkbox-menu:checked ~ .menu-entete-container {
     transform: translateX(0);
