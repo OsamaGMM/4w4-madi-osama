@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 /* Formulaire de recherche personnalisée */
 ?>
 <form class="recherche" role="search" method="get"  action="<?php echo esc_url( home_url( '/' ) ); ?>">
@@ -8,4 +8,4 @@
   <button class="recherche__bouton" type="submit" class="search-submit">
     <span class="recherche__icone">&#x1F50D;</span>
   </button>
-</form> -->
+</form>

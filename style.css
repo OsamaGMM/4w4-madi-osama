@@ -321,12 +321,13 @@ template {
 }
 
 /* --------------------------------------------- base */
-h1, h1 > a {
+h1,
+h1 > a {
   font-size: clamp(0.9375rem, 0.7745rem + 0.8152vw, 2.8125rem);
 }
 
 h2 {
-  font-size: clamp(0.75rem, -0.3125rem + 3vw, 2.5rem);
+  font-size: clamp(0.75rem, -0.3125rem + 3vw, 1.85rem);
 }
 
 h3 {
@@ -349,24 +350,19 @@ p {
   font-size: clamp(0.6rem, 0.125rem + 1.2vw, 1.1rem);
 }
 
-h1 {
+h1, h2 {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-}
-
-h2 {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  /* font-family: "Slackey", cursive; */
 }
 
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 p {
-  font-family: "Poppins", sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
 .single h1, .single h2, .single h3 {
@@ -416,6 +412,14 @@ a:hover {
 .site__header a {
   color: white;
 }
+.site__header .recherche {
+  display: none;
+}
+@media (min-width: 600px) {
+  .site__header .recherche {
+    display: block;
+  }
+}
 .site__header #checkbox-menu:checked ~ .menu-entete-container {
   transform: translateX(0);
   display: block;
@@ -457,6 +461,9 @@ a:hover {
 .article h1, .article h2, .article p {
   padding-left: 1rem;
 }
+.article h2, .article a {
+  color: rgb(42, 117, 192);
+}
 .article:last-child {
   width: 100%;
 }
@@ -496,9 +503,6 @@ figure.is-layout-flex {
   .liste-articles {
     grid-template-columns: 1fr 1fr 1fr;
   }
-}
-.liste-articles a {
-  color: rgb(42, 117, 192);
 }
 
 .galerie {
@@ -556,6 +560,7 @@ figure.is-layout-flex {
 }
 .site__aside h3 {
   text-align: center;
+  text-decoration: underline;
 }
 .site__aside h3:hover + nav {
   transform: scaleY(1);

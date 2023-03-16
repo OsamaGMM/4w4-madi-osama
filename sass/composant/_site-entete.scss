@@ -10,6 +10,13 @@
     color: white;
   }
 
+  .recherche{
+    display: none;
+    @media (min-width : 600px) {
+      display: block;
+    }
+  }
+
   #checkbox-menu:checked ~ .menu-entete-container {
     transform: translateX(0);
     display: block;

@@ -5,6 +5,7 @@
   }
   h3 {
     text-align: center;
+    text-decoration: underline;
 
     &:hover + nav{
         transform: scaleY(1);

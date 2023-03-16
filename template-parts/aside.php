@@ -1,6 +1,6 @@
 <aside class="site__aside">
 
-    <h3>Menu secondaire</h3>
+    <h3>Menu</h3>
 
     <?php 
     $ma_categorie  = "note-4w4";
