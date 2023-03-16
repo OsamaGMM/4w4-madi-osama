@@ -10,8 +10,8 @@ $duree = substr($titre,-5,5)
 ?> 
 
 <div class="article">  
-    <h1><a href="<?php the_permalink(); ?>"> <?= $sigle ?></a></h1>
+    <h2><a href="<?php the_permalink(); ?>"> <?= $sigle ?></a></h2>
     <h1><?= $titre_long ?></h1>
     <p><?= wp_trim_words(get_the_excerpt(), 15) ?></p>
-    <h1><?= $duree ?></h1>
+    <h2><?= $duree ?></h2>
 </div>

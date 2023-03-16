@@ -10,11 +10,18 @@
         grid-template-columns: 1fr 1fr 1fr;
     }
 
+    margin: 10px;
+
     //mobile first
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
     gap: 2rem;
+
+    a{
+     color: rgb(42, 117, 192);
+
+    }
 }
 
 .galerie{

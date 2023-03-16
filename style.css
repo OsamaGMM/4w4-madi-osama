@@ -362,11 +362,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 p {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .single h1, .single h2, .single h3 {
@@ -413,6 +413,9 @@ a:hover {
   justify-content: space-between;
   background-color: rgb(42, 117, 192);
 }
+.site__header a {
+  color: white;
+}
 .site__header #checkbox-menu:checked ~ .menu-entete-container {
   transform: translateX(0);
   display: block;
@@ -446,28 +449,16 @@ a:hover {
 }
 
 .article {
-  width: 50vw;
-  background-color: rgb(42, 117, 192);
-  border: 3px solid black;
-  border-radius: 10px;
+  width: 100%;
   box-shadow: 5px 5px 10px rgb(88, 86, 86);
-  color: white;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
 }
-@media (min-width: 700px) {
-  .article {
-    max-width: 40vw;
-  }
+.article h1, .article h2, .article p {
+  padding-left: 1rem;
 }
-@media (min-width: 1024px) {
-  .article {
-    max-width: 25vw;
-  }
-}
-.article h1 {
-  text-align: center;
-}
-.article p {
-  text-align: center;
+.article:last-child {
+  width: 100%;
 }
 
 .galerie {
@@ -490,6 +481,7 @@ figure.is-layout-flex {
 }
 
 .liste-articles {
+  margin: 10px;
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
@@ -504,6 +496,9 @@ figure.is-layout-flex {
   .liste-articles {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+.liste-articles a {
+  color: rgb(42, 117, 192);
 }
 
 .galerie {

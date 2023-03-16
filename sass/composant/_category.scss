@@ -1,26 +1,26 @@
     //style de chaque article
     .article{
-        @media (min-width: $largeur__tablette) {
-            max-width: 40vw;
-        }
-        @media (min-width: $largeur__ordi) {
-            max-width: 25vw;
-        }
-        width: 50vw;
-        background-color: rgb(42, 117, 192);
-        border: 3px solid black;
-        border-radius: 10px;
+        width: 100%;
+
+        // background-color: rgb(42, 117, 192);
+        // border: 3px solid black;
+        // border-radius: 10px;
         box-shadow: 5px 5px 10px rgb(88, 86, 86);
-        color: white;
-        h1{
-            text-align: center;
+        // color: white;
+        border-bottom: 2px solid black;
+        border-right: 2px solid black;
+
+        h1,h2,p{
+            padding-left: 1rem;
         }
-        p{
-            text-align: center;
+
+        &:last-child{//pour l'article galerie
+            width: 100%;
         }
     }
 
     .galerie{
+        
         grid-row: 1;
         grid-template-columns: 1fr;
         @media (min-width: $largeur__tablette) {

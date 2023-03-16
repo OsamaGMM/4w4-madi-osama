@@ -8,6 +8,9 @@ function ajouter_styles()
         array(), // les fichiers css qui dépendent de style.css
         filemtime(get_template_directory() . '/style.css')  // version de notre style.css
     );
+    wp_enqueue_style("google_font",
+                "https://fonts.google.com/share?selection.family=Poppins:wght@100;400",
+                false);   
 }
 add_action('wp_enqueue_scripts', 'ajouter_styles');
 
@@ -21,6 +24,7 @@ if (!function_exists('enregistrement_nav_menu')) {
     {
         register_nav_menus(array(
             'principal' => __('Menu Principal'),
+            'menu_sidebar'  => 'Menu sidebar',
             'footer'  => __('Menu Pied De Page'),
         ));
     }

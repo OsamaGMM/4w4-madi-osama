@@ -3,5 +3,6 @@
 ?>
 
 <div class="galerie">
+   
     <?= the_content(); ?>
 </div>
