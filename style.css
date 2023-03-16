@@ -418,7 +418,7 @@ a:hover {
   display: block;
 }
 .site__header .menu-entete-container {
-  transform: translateX(300px);
+  transform: translateX(500px);
   transition: transform 0.5s;
 }
 @media screen and (min-width: 700px) {
@@ -551,15 +551,51 @@ figure.is-layout-flex {
   display: none;
 }
 
-.site {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-areas: "header" "aside" "main" "footer";
+.site__aside {
+  display: none;
 }
-@media screen and (min-width: 800px) {
-  .site {
-    grid-template-areas: "header header" "aside main" ". main" "footer footer";
+@media (min-width: 600px) {
+  .site__aside {
+    display: block;
   }
+}
+.site__aside h3 {
+  text-align: center;
+}
+.site__aside h3:hover + nav {
+  transform: scaleY(1);
+  position: static;
+}
+@media (min-width: 600px) {
+  .site__aside nav {
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: 500ms;
+    position: absolute;
+  }
+}
+@media (min-width: 800px) {
+  .site__aside nav {
+    transform: scaleY(1);
+  }
+}
+.site__aside nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin: 5px 5px;
+}
+@media (min-width: 800px) {
+  .site__aside nav ul {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+}
+.site__aside nav ul li {
+  list-style: none;
+  margin: 5px 5px;
+  border-bottom: 1px solid;
 }
 
 .site__header {
@@ -571,28 +607,23 @@ figure.is-layout-flex {
 }
 
 .site__aside {
-  display: none;
+  grid-area: aside;
+}
+
+.site__footer {
+  grid-area: footer;
+}
+
+.site {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas: "header" "aside" "main" "footer";
 }
 @media screen and (min-width: 800px) {
-  .site__aside {
-    display: block;
-    grid-area: aside;
+  .site {
+    grid-template-columns: 20% auto;
+    grid-template-areas: "header header" "aside main" "footer footer";
   }
-}
-
-aside nav {
-  border: 1px solid rgb(50, 48, 48);
-}
-aside h3 {
-  text-align: center;
-}
-aside ul {
-  padding: 0;
-  margin: 5px 5px;
-}
-
-aside nav ul li {
-  list-style: none;
 }
 
 .no-aside {

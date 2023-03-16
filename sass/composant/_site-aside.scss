@@ -1,0 +1,44 @@
+.site__aside {
+  display: none;
+  @media (min-width: 600px) {
+    display: block;
+  }
+  h3 {
+    text-align: center;
+
+    &:hover + nav{
+        transform: scaleY(1);
+        position: static;
+    }
+  }
+  nav {
+    @media (min-width:600px) {
+        transform-origin: top;
+        transform: scaleY(0);
+        transition: 500ms ;
+        position: absolute;
+    }
+    @media (min-width:800px) {
+        transform: scaleY(1);
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        padding: 0;
+        margin: 5px 5px;
+            @media (min-width:800px) {
+        flex-wrap:nowrap;
+        flex-direction: column;
+    }
+
+      li {
+        list-style: none;
+        margin: 5px 5px;
+        border-bottom: 1px solid;
+      }
+    }
+  }
+}

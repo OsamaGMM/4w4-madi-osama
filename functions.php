@@ -68,5 +68,21 @@ function cidweb_modifie_requete_principal($query)
 }
 add_action('pre_get_posts', 'cidweb_modifie_requete_principal');
 
-
+function perso_menu_item_title($title, $item, $args) {
+    // Remplacer 'nom_de_votre_menu' par l'identifiant de votre menu
+    if($args->menu == 'cours') { // on filtre uniquement le menu «cours»
+    // Modifier la longueur du titre en fonction de nos besoins
+    $sigle = substr($title,4,3);
+    $title = substr($title, 7);
+    $title = "<code>" .$sigle . "</code>" ." ".wp_trim_words($title, 1, "") ;
+    }
+    if($args->menu == 'note-4w4') { // on filtre uniquement le menu note-4w4
+        // Modifier la longueur du titre en fonction de nos besoins
+        $sigle = substr($title,0,2);
+        $title = substr($title, 3);
+        $title = "<code>" .$sigle . "</code>" ." ".wp_trim_words($title, 1, "") ;
+        }
+    return $title;
+    }
+    add_filter('nav_menu_item_title', 'perso_menu_item_title', 10, 3);  
 
