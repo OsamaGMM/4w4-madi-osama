@@ -17,4 +17,3 @@ $duree = substr($titre,-5,5)
 endif;
 ?>
 </main>
-<?php get_footer(); ?>

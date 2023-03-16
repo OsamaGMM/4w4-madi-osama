@@ -378,11 +378,6 @@ p {
 .single p {
   margin: 15px;
 }
-.single pre {
-  text-align: center;
-  background-color: rgb(237, 237, 94);
-  border-radius: 2rem;
-}
 
 body {
   background-color: white;
