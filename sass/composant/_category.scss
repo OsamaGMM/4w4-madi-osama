@@ -33,9 +33,31 @@
         @media (min-width: $largeur__tablette) {
             grid-template-columns: 1fr 1fr 1fr;
         }
+
+        h1{
+            display: none;
+        }
+
+        @media (min-width:700px) {
+            h1{
+                display: block;
+            }
+            figure{
+                color: rgb(42, 117, 192);
+                -webkit-filter:brightness(50%);
+                filter: brightness(50%);
+                transition: 800ms ease;
+    
+                &:hover{
+                    box-shadow: 0px 0px 0px 10px;
+                    filter: brightness(100%);
+                    transition: 800ms ease;
+                }
+            }
+            
+        }
+
+
+
     }
 
-    figure.is-layout-flex{
-        //Enlever le wrap des photos
-        flex-wrap: nowrap;
-    }
