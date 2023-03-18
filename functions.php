@@ -31,6 +31,21 @@ if (!function_exists('enregistrement_nav_menu')) {
     add_action('after_setup_theme', 'enregistrement_nav_menu', 0);
 }
 
+/* -------------------------------------- add_theme_suport */
+
+add_theme_support( 'title-tag' );
+add_theme_support( 'custom-logo', array(
+    'height' => 480,
+    'width'  => 720,
+) );
+add_theme_support('custom-background');
+
+// 'default-color' => '0000ff',
+// 'default-image' => get_template_directory_uri() . '/images/wapuu.jpg',
+// );
+// add_theme_support( 'custom-background', $args );
+
+
 /* ----------------------------------- Modification des choix de menu « cours » */
 function personnalisation_menu_item_title($title, $item, $args)
 {
