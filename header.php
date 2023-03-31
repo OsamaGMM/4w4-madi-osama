@@ -9,7 +9,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body class="custom-background site <?= (is_front_page() ? 'no-aside' : '') ?>">
+<body class="custom-background site <?= (is_front_page() ? 'no-aside' : '') ?> <?= (is_search() ? 'no-aside' : '') ?>" >
     <header class="site__header">
 
         <section class="site__header__logo">

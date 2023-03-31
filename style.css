@@ -621,20 +621,26 @@ a:hover {
 
 .recherche {
   display: grid;
-  width: 100vw;
-  grid-template-columns: max-content;
+  grid-area: main;
 }
 .recherche h1 {
   text-align: center;
 }
 .recherche .search {
-  display: flex;
-  align-items: center;
   border-bottom: 2px solid black;
-  width: 95vw;
+}
+@media (min-width: 1000px) {
+  .recherche .search {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    align-items: center;
+  }
 }
 .recherche .search .side {
   background-color: grey;
+  margin: 1rem;
+}
+.recherche .search p {
   margin: 1rem;
 }
 
