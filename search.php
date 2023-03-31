@@ -4,27 +4,21 @@ $page = 'pageSearch'
 
 ?>
 <?php get_header(); ?>
-<main class="recherche">
+<section class="recherche <?= (is_search() ? 'no-aside' : '') ?>">
 
-    search.php
+    <h1>Resultat de la recherche</h1>
 
-
-<?php
-    $categorie = '4w4';
-    $s=get_search_query();
-    $args = array(
-        's'=>$s
-    );
-    $query = new WP_Query($args);
-
-    if ($query->have_posts()) :
-        while ($query->have_posts()) : $query->the_post(); ?>
-        
-        <?= get_template_part('template-parts/search', $categorie) ?>
-
+    <?php if(have_posts()):
+        while(have_posts()) : the_post();
+        $category = 'cours';
+        get_template_part('template-parts/search', $category);
+        //the_content();
+    ?>
     <?php endwhile;
     endif;
-    wp_reset_postdata(); ?>
+    ?>
 
-</main>
+
+
+</section>
 <?php get_footer(); ?>

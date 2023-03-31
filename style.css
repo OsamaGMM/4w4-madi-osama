@@ -551,6 +551,23 @@ a:hover {
   margin: 1rem;
 }
 
+/* ------------------------------------------ Bouton burger */
+.burger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+}
+@media screen and (min-width: 700px) {
+  .burger {
+    display: none;
+  }
+}
+
+#checkbox-menu {
+  display: none;
+}
+
 .site__aside {
   display: none;
 }
@@ -602,8 +619,19 @@ a:hover {
   border-bottom: 1px solid;
 }
 
+.recherche {
+  display: grid;
+  width: 100vw;
+}
 .recherche .search {
-  background: rgb(122, 122, 238);
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+  border-bottom: 2px solid black;
+}
+.recherche .search .side {
+  background-color: grey;
+  margin: 1rem;
 }
 
 .site__header {
