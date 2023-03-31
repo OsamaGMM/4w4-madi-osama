@@ -4,7 +4,7 @@ $page = 'pageSearch'
 
 ?>
 <?php get_header(); ?>
-<section class="recherche <?= (is_search() ? 'no-aside' : '') ?>">
+<main class="recherche <?= (is_search() ? 'no-aside' : '') ?>">
 
     <h1>Resultat de la recherche</h1>
 
@@ -20,5 +20,5 @@ $page = 'pageSearch'
 
 
 
-</section>
+</main>
 <?php get_footer(); ?>

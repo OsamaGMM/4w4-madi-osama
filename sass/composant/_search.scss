@@ -1,11 +1,15 @@
 .recherche{
     display: grid;
     width:100vw;
+    grid-template-columns: max-content;
+    h1{
+        text-align: center;
+    }
     .search{
         display: flex;
         align-items: center;
-        margin: 1rem;
         border-bottom:2px solid black ;
+        width: 95vw;
         .side{
             background-color: grey;
             margin: 1rem;

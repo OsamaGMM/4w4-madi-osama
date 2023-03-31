@@ -622,12 +622,16 @@ a:hover {
 .recherche {
   display: grid;
   width: 100vw;
+  grid-template-columns: max-content;
+}
+.recherche h1 {
+  text-align: center;
 }
 .recherche .search {
   display: flex;
   align-items: center;
-  margin: 1rem;
   border-bottom: 2px solid black;
+  width: 95vw;
 }
 .recherche .search .side {
   background-color: grey;
