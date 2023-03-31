@@ -1,19 +1,30 @@
 <?php
 
+$page = 'pageSearch'
+
 ?>
 <?php get_header(); ?>
-<main>
+<main class="recherche">
 
-    <?php if(have_posts()) :
-        while (have_posts()) : the_post();
-        the_title('<h1> </h1>');
-        //the_content();
-        wp_trim_words(the_excerpt(), 50)
-        ?>
+    search.php
+
+
+<?php
+    $categorie = '4w4';
+    $s=get_search_query();
+    $args = array(
+        's'=>$s
+    );
+    $query = new WP_Query($args);
+
+    if ($query->have_posts()) :
+        while ($query->have_posts()) : $query->the_post(); ?>
         
-        <hr>
+        <?= get_template_part('template-parts/search', $categorie) ?>
+
     <?php endwhile;
-endif;
-?>
+    endif;
+    wp_reset_postdata(); ?>
+
 </main>
 <?php get_footer(); ?>
