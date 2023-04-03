@@ -15,7 +15,7 @@
   .menu-entete-container {
     transform: translateX(500px);
     transition: transform 0.5s;
-    @media screen and (min-width: $largeur__tablette) {
+    @media screen and (min-width: $largeur__tablette1) {
       transform: translateX(0);
     }
 
@@ -26,7 +26,7 @@
 
       list-style: none;
 
-      @media screen and (min-width: $largeur__tablette) {
+      @media screen and (min-width: $largeur__tablette1) {
         flex-direction: row;
         align-items: center;
         justify-content: flex-end;
