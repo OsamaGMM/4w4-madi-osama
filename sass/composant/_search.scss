@@ -5,7 +5,7 @@
     text-align: center;
   }
   .search {
-    @media (min-width: 1000px) {
+    @media (min-width: $largeur__ordi) {
       display: grid;
       grid-template-columns: 30% 1fr;
       align-items: center;

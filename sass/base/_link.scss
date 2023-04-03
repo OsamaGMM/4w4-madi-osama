@@ -4,8 +4,18 @@ a{
     &:visited{
         color: none;
     }
-    &:hover{
-        transform:scale(1.5);
-        color: rgb(131, 131, 226);
-    }
+
+    &:after {
+        content: "";
+        display: block;
+        margin: auto;
+        height: 3px;
+        width: 0px;
+        background: transparent;
+        transition: width 0.5s ease;
+      }
+      &:hover:after {
+        width: 100%;
+        background: black;
+      }
 }

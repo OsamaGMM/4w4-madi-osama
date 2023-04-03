@@ -33,7 +33,7 @@
 
         padding: 0;
         margin: 5px 5px;
-            @media (min-width : $largeur__tablette1) {
+            @media (min-width : $largeur__tablette) {
         flex-wrap:nowrap;
         flex-direction: column;
     }

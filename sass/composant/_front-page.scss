@@ -2,7 +2,7 @@
     //Ajout de media queries pour le responsive!
     //Il y a une meilleur facon de faire avec des @mixin
     //tablette
-    @media (min-width: $largeur__tablette1) {
+    @media (min-width: $largeur__tablette) {
         grid-template-columns: 1fr 1fr;
     }
     //ordi
@@ -23,7 +23,7 @@
 .galerie{
     margin: 10px 10px;
 
-    @media (min-width: $largeur__tablette1) {
+    @media (min-width: $largeur__tablette) {
         grid-column: 1/3;
     }
     @media (min-width: $largeur__ordi) {

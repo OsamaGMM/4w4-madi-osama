@@ -22,7 +22,7 @@
     "footer";
   // row-gap: 50px;
 
-  @media screen and (min-width: $largeur__tablette1) {
+  @media screen and (min-width: 800px) {
     grid-template-columns: 20% auto;
     grid-template-areas:
       "header header"
@@ -32,14 +32,12 @@
 }
 
 
-
-
 .no-aside {
   grid-template-areas:
     "header"
     "main"
     "footer";
-  @media screen and (min-width: $largeur__tablette1) {
+  @media screen and (min-width: 800px) {
     grid-template-columns: auto;
     grid-template-areas:
       "header"
