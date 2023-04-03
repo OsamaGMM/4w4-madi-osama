@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgb(42, 117, 192);
+  background-color: $couleur_princ;
 
   #checkbox-menu:checked ~ .menu-entete-container {
     transform: translateX(0);
@@ -35,7 +35,6 @@
       .menu-item {
         font-size: 18px;
         margin: 5px 15px;
-        border-bottom: 1px solid;
       }
     }
   }

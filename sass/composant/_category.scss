@@ -15,7 +15,7 @@
         }
 
         h2,a{
-            color: rgb(42, 117, 192);
+            color:$couleur_princ;
         }
 
         &:last-child{//pour l'article galerie
@@ -43,7 +43,7 @@
                 display: block;
             }
             figure{
-                color: rgb(42, 117, 192);
+                color: $couleur_princ;
                 -webkit-filter:brightness(50%);
                 filter: brightness(50%);
                 transition: 800ms ease;

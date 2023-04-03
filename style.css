@@ -385,15 +385,24 @@ body {
 }
 
 a {
-  color: white;
+  color: rgb(0, 0, 0);
   text-decoration: none;
 }
 a:visited {
   color: none;
 }
-a:hover {
-  transform: scale(1.5);
-  color: rgb(131, 131, 226);
+a:after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 0px;
+  background: transparent;
+  transition: width 0.5s ease;
+}
+a:hover:after {
+  width: 100%;
+  background: black;
 }
 
 /* --------------------------------------------- composant */
@@ -433,7 +442,6 @@ a:hover {
 .site__header .menu-entete-container .menu .menu-item {
   font-size: 18px;
   margin: 5px 15px;
-  border-bottom: 1px solid;
 }
 
 .article {
@@ -538,9 +546,6 @@ a:hover {
   list-style: none;
   padding: 0;
 }
-.site__footer .menu-footer-container .menu-item {
-  text-decoration: underline;
-}
 .site__footer .menu1 {
   display: flex;
   justify-content: space-evenly;
@@ -637,11 +642,12 @@ a:hover {
   }
 }
 .recherche .search .side {
-  background-color: grey;
+  background-color: rgb(42, 117, 192);
   margin: 1rem;
 }
-.recherche .search p {
-  margin: 1rem;
+.recherche .search p,
+.recherche .search h2 {
+  margin: 0.5rem;
 }
 
 .site__header {

@@ -5,7 +5,7 @@
 $titre = get_the_title();
 $sigle = substr($titre,0,7); // 582-1w1 - Mise en page web
 $titre_long = substr($titre,7,-5); // 582-1w1 Mise en ... (60h)
-$duree = substr($titre,strpos($titre, '('));
+$duree = substr($titre, strpos($titre, '('));
 // strpos($titre, '(') //permet de trouver la position dy caractère ,'('
 
 

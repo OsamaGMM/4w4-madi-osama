@@ -1,25 +1,24 @@
-
-.recherche{
-    display: grid;
-    grid-area: main;
-    h1{
-        text-align: center;
+.recherche {
+  display: grid;
+  grid-area: main;
+  h1 {
+    text-align: center;
+  }
+  .search {
+    @media (min-width: 1000px) {
+      display: grid;
+      grid-template-columns: 30% 1fr;
+      align-items: center;
     }
-    .search{
-        @media (min-width:1000px) {
-            display: grid;
-            grid-template-columns: 30% 1fr;
-            align-items: center;
-        }
-        border-bottom:2px solid black ;
-        .side{
-            background-color: grey;
-            margin: 1rem;
-        }
-        p{
-            margin: 1rem;
+    border-bottom: 2px solid black;
 
-        }
-
+    .side {
+      background-color: $couleur_princ;
+      margin: 1rem;
     }
+    p,
+    h2 {
+      margin: 0.5rem;
+    }
+  }
 }
