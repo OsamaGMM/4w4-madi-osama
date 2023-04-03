@@ -1,21 +1,11 @@
 a{
-    color: rgb(0, 0, 0);
+    color: white;
     text-decoration: none;
     &:visited{
         color: none;
     }
-
-    &:after {
-        content: "";
-        display: block;
-        margin: auto;
-        height: 3px;
-        width: 0px;
-        background: transparent;
-        transition: width 0.5s ease;
-      }
-      &:hover:after {
-        width: 100%;
-        background: black;
-      }
+    &:hover{
+        transform:scale(1.5);
+        color: rgb(131, 131, 226);
+    }
 }

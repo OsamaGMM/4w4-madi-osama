@@ -385,24 +385,15 @@ body {
 }
 
 a {
-  color: rgb(0, 0, 0);
+  color: white;
   text-decoration: none;
 }
 a:visited {
   color: none;
 }
-a:after {
-  content: "";
-  display: block;
-  margin: auto;
-  height: 3px;
-  width: 0px;
-  background: transparent;
-  transition: width 0.5s ease;
-}
-a:hover:after {
-  width: 100%;
-  background: black;
+a:hover {
+  transform: scale(1.5);
+  color: rgb(131, 131, 226);
 }
 
 /* --------------------------------------------- composant */
@@ -442,6 +433,7 @@ a:hover:after {
 .site__header .menu-entete-container .menu .menu-item {
   font-size: 18px;
   margin: 5px 15px;
+  border-bottom: 1px solid;
 }
 
 .article {
@@ -546,6 +538,9 @@ a:hover:after {
   list-style: none;
   padding: 0;
 }
+.site__footer .menu-footer-container .menu-item {
+  text-decoration: underline;
+}
 .site__footer .menu1 {
   display: flex;
   justify-content: space-evenly;
@@ -642,12 +637,11 @@ a:hover:after {
   }
 }
 .recherche .search .side {
-  background-color: rgb(42, 117, 192);
+  background-color: grey;
   margin: 1rem;
 }
-.recherche .search p,
-.recherche .search h2 {
-  margin: 0.5rem;
+.recherche .search p {
+  margin: 1rem;
 }
 
 .site__header {

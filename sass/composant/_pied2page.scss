@@ -4,7 +4,7 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
 
-  background-color: $couleur_princ;
+  background-color: rgb(42, 117, 192);
 
   .menu-footer-container {
     flex-grow: 1;
@@ -14,7 +14,9 @@
       list-style: none;
       padding: 0;
     }
-
+    .menu-item {
+      text-decoration: underline;
+    }
   }
 
 

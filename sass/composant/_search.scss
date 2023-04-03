@@ -5,7 +5,7 @@
     text-align: center;
   }
   .search {
-    @media (min-width: $largeur__ordi) {
+    @media (min-width: 1000px) {
       display: grid;
       grid-template-columns: 30% 1fr;
       align-items: center;
@@ -20,5 +20,5 @@
     h2 {
       margin: 0.5rem;
     }
-  }
+}
 }

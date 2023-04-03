@@ -5,11 +5,16 @@
     <h1>Resultat de la recherche</h1>
 
     <?php
+    $category = '4w4';
+
     if (have_posts()) :
         while (have_posts()) : the_post();
-            $category = '4w4';
-            (in_category('cours') ? $category = 'cours' : '');
-            get_template_part('template-parts/search', $category);
+            if (in_category('cours')) {
+                $category = 'cours';
+                get_template_part('template-parts/search', $category);
+            } else {
+                get_template_part('template-parts/search', $category);
+            }
     ?>
     <?php endwhile;
     endif;
