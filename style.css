@@ -575,6 +575,7 @@ a:hover:after {
 
 .site__aside {
   display: none;
+  overflow: scroll;
 }
 @media (min-width: 700px) {
   .site__aside {
@@ -648,6 +649,14 @@ a:hover:after {
 .recherche .search p,
 .recherche .search h2 {
   margin: 0.5rem;
+}
+
+.menu-evenement-containeur .menu {
+  display: flex;
+}
+.menu-evenement-containeur .menu .menu-item {
+  border: solid 3px black;
+  height: 50px;
 }
 
 .site__header {

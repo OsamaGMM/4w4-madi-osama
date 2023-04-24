@@ -1,5 +1,6 @@
 .site__aside {
   display: none;
+  overflow: scroll;
   @media (min-width: 700px) {
     display: block;
   }
