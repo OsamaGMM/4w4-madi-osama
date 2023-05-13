@@ -69,6 +69,7 @@ add_theme_support(
     )
 );
 add_theme_support('post-thumbnail');
+add_theme_support('custom-background');
 
 /**
  * Modifie la requete principale de Wordpress avant qu'elle soit exécuté
@@ -105,3 +106,26 @@ function perso_menu_item_title($title, $item, $args) {
     }
     add_filter('nav_menu_item_title', 'perso_menu_item_title', 10, 3);  
 
+    function enregistrer_sidebar() {
+        register_sidebar( array(
+            'name' => __( 'Footer 1', '4w4-osama-oadi' ),
+            'id' => 'footer_1',
+            'description' => __( 'Une zone  afficher des widgets dans le footer.', '4w4-eddy-martin' ),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '<h2 class="widget-title">',
+            'after_title' => '</h2>',
+        ) );
+    
+        register_sidebar( array(
+            'name' => __( 'Footer 2', '4w4-osama-madi' ),
+            'id' => 'footer_2',
+            'description' => __( 'Une zone  afficher des widgets dans le footer.', '4w4-eddy-martin' ),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '<h2 class="widget-title">',
+            'after_title' => '</h2>',
+        ) );
+    
+    }
+    add_action( 'widgets_init', 'enregistrer_sidebar' );

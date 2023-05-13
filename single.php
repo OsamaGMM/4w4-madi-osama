@@ -11,6 +11,7 @@ $duree = substr($titre,-5,5)
     <h1><?= $titre ?></h1>
     <?php if(have_posts()) :
         while (have_posts()) : the_post();
+        the_post_thumbnail('thumbnail');
         the_content();?>
         <hr>
     <?php endwhile;
