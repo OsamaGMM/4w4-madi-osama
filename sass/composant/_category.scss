@@ -25,7 +25,7 @@
 
     .galerie{
         
-        grid-row: 1;
+        grid-row: 2;
         grid-template-columns: 1fr;
         @media (min-width: $largeur__tablette) {
             grid-template-columns: 1fr 1fr;

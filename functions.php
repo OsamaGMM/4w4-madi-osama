@@ -108,7 +108,7 @@ function perso_menu_item_title($title, $item, $args) {
 
     function enregistrer_sidebar() {
         register_sidebar( array(
-            'name' => __( 'Footer 1', '4w4-osama-oadi' ),
+            'name' => __( 'Footer 1', '4w4-osama-madi' ),
             'id' => 'footer_1',
             'description' => __( 'Une zone  afficher des widgets dans le footer.', '4w4-eddy-martin' ),
             'before_widget' => '<div id="%1$s" class="widget %2$s">',

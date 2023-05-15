@@ -1,6 +1,10 @@
 <?php get_header(); ?>
 
-<section>
+
+
+<section class="liste-articles">
+    
+<section class="intro">
     <?php
      wp_nav_menu(array(
         "menu" => "evenement",
@@ -11,12 +15,8 @@
         "menu" => "bloc-archive",
         "container" => "nav"
     ));
-    
     ?>
-
 </section>
-
-<section class="liste-articles">
 
 
     <?php
