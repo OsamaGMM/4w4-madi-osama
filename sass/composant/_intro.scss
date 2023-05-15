@@ -1,5 +1,4 @@
 .intro{
-    height: 50vh;
     width: 100%;
     grid-row: 1;
     grid-template-columns: 1fr;
@@ -20,23 +19,52 @@
 
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
 
     @media (min-width: 600px) {
         flex-direction: row;
-    justify-content: space-between;
-
+        justify-content: space-between;
     }
 
-    nav{
-        border: 1px solid;
 
-        ul{
+    .menu-evenement-container{
+        border-right: 1px solid;
+        padding-right: 4rem;
+        .menu{
+            display: flex;
+            flex-direction: column;
             list-style: none;
             padding: 0;
             li{
+                .description{
+                    display: none;
+                }
+
+                a{
+                    display: flex;
+                    flex-direction: row-reverse;
+                }
 
             }
+        }
+    }
+    .menu-bloc-archive-container{
+        .menu{
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            padding: 0;
+            .menu-item{
+                padding: 5px;
+                a{
+                    display: flex;
+                    flex-wrap: wrap;
+                    span{
+                        padding: 3px;
+                    }
+                }
+            }
+             
         }
     }
 

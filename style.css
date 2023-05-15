@@ -386,6 +386,7 @@ body {
 
 a {
   text-decoration: none;
+  color: black;
 }
 a:visited {
   color: none;
@@ -659,14 +660,13 @@ a:hover:after {
 }
 
 .intro {
-  height: 50vh;
   width: 100%;
   grid-row: 1;
   grid-template-columns: 1fr;
   margin: 10px 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 @media (min-width: 700px) {
   .intro {
@@ -694,13 +694,40 @@ a:hover:after {
     justify-content: space-between;
   }
 }
-.intro nav {
-  border: 1px solid;
+.intro .menu-evenement-container {
+  border-right: 1px solid;
+  padding-right: 4rem;
 }
-.intro nav ul {
+.intro .menu-evenement-container .menu {
+  display: flex;
+  flex-direction: column;
   list-style: none;
   padding: 0;
 }
+.intro .menu-evenement-container .menu li .description {
+  display: none;
+}
+.intro .menu-evenement-container .menu li a {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.intro .menu-bloc-archive-container .menu {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+}
+.intro .menu-bloc-archive-container .menu .menu-item {
+  padding: 5px;
+}
+.intro .menu-bloc-archive-container .menu .menu-item a {
+  display: flex;
+  flex-wrap: wrap;
+}
+.intro .menu-bloc-archive-container .menu .menu-item a span {
+  padding: 3px;
+}
+
 .site__header {
   grid-area: header;
 }

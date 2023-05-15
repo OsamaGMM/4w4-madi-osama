@@ -23,6 +23,9 @@
             <li><a title="Essaie moi" target="_blank" href="https://www.youtube.com/watch?v=xm3YgoEiEDc"> <img src="https://s2.svgbox.net/hero-solid.svg?ic=question-mark-circle&color=000" width="32" height="32"> </a></li>
         </ul>
     </nav>
+    <div class="sidebar">
+        <?php dynamic_sidebar('footer_2') ?>
+    </div>
     <?php get_search_form(); ?>
 
 

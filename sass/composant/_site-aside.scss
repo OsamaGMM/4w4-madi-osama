@@ -4,40 +4,40 @@
   @media (min-width: 700px) {
     display: block;
   }
-  a{
+  a {
     color: black;
   }
   h3 {
     text-align: center;
     text-decoration: underline;
 
-    &:hover + nav{
-        transform: scaleY(1);
-        position: static;
+    &:hover + nav {
+      transform: scaleY(1);
+      position: static;
     }
   }
   nav {
-    @media (min-width:700px) {
-        transform-origin: top;
-        transform: scaleY(0);
-        transition: 500ms ;
-        position: absolute;
+    @media (min-width: 700px) {
+      transform-origin: top;
+      transform: scaleY(0);
+      transition: 500ms;
+      position: absolute;
     }
-    @media (min-width:800px) {
-        transform: scaleY(1);
+    @media (min-width: 800px) {
+      transform: scaleY(1);
     }
 
     ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
 
-        padding: 0;
-        margin: 5px 5px;
-            @media (min-width : $largeur__tablette) {
-        flex-wrap:nowrap;
+      padding: 0;
+      margin: 5px 5px;
+      @media (min-width: $largeur__tablette) {
+        flex-wrap: nowrap;
         flex-direction: column;
-    }
+      }
 
       li {
         list-style: none;
