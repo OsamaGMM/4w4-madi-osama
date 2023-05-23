@@ -9,7 +9,18 @@
     <?php wp_head(); ?>
 </head>
 
-<body class="custom-background site <?= (is_front_page() ? 'no-aside' : '') ?> <?= (is_search() ? 'no-aside' : '') ?>" >
+<?php
+ $nouvelle_class = "";
+ if(is_front_page() ||
+    (!is_category('cours') && !in_category('4w4'))){
+        $nouvelle_class = 'no-aside';
+    }
+    if(is_page_template('template-atelier.php')){
+        $nouvelle_class = '';
+    }
+ ?>
+
+<body class="custom-background site <?= $nouvelle_class ?>" >
     <header class="site__header">
 
         <section class="site__header__logo">
@@ -27,7 +38,10 @@
     </header>
 
     <?php
-    if (!is_front_page() && !is_search()) {
+    if (!is_front_page() && !is_search() && !is_page_template('template-atelier.php')) {
         get_template_part("template-parts/aside");
+    }
+    if(is_page_template('template-atelier.php')){
+        get_template_part("template-parts/aside-atelier");
     }
     ?>

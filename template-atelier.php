@@ -8,13 +8,18 @@
 
 <?php get_header(); ?>
 <main class="site__main">
-    <?php the_post_thumbnail() ?>
     <?php
+
     if (have_posts()) : the_post(); ?>
         <h1><?= get_the_title(); ?></h1>
         <?php the_content(); ?>
-        <p>L'adresse de l'evénement : <?php the_field('formateur'); ?></p>
-        <p>La date et l'heure de l'événement<?php the_field(''); ?></p>
+    <div class="info">
+        <p>Date :  <?php the_field('date_de_latelier'); ?></p>
+        <p>Heure : <?php the_field('heure_de_la_formation'); ?></p>
+        <p>Durée :<?php the_field('duree'); ?></p>
+        <p>Local :<?php the_field('local'); ?></p>
+        <p>Formateur :<?php the_field('formateur'); ?></p>
+    </div>
     <?php endif; ?>
 </main><!-- #main -->
 <?php
