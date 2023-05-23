@@ -19,7 +19,7 @@
     EN COMMENTAIRE POUR LEPREUVE FINALE
 </section> -->
 
-<section class="intro">
+<section class="intro2">
     <?php
      wp_nav_menu(array(
         "menu" => "atelier",
