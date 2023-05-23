@@ -30,8 +30,40 @@
 .intro{
   .menu-atelier-container{
     .menu{
+      list-style: none;
+      padding: 0;
       .menu-item{
-        background-color: black;
+        overflow: hidden;
+        &:hover{
+          .title{
+            transition: transform 1s;
+            transform: translateY(0rem);
+            background-color: black;
+            color: white;
+          }
+          .description{
+            transition: transform 1s;
+            transform: translateY(8rem);
+            background-color: black;
+            color: white;
+          }
+        }
+        a{
+          position: relative;
+          .title{
+            position: absolute;
+            transform: translateY(-2rem);
+            width: 100%;
+            text-align: center;
+
+          }
+          .description{
+            position: absolute;
+            transform: translateY(10rem);
+            width: 100%;
+            text-align: center;
+          }
+        }
       }
     }
   }
