@@ -4,6 +4,21 @@
 
 <section class="liste-articles">
     
+<!-- <section class="intro">
+    <?php
+    //  wp_nav_menu(array(
+    //     "menu" => "evenement",
+    //     "container" => "nav"
+    // ));
+
+    // wp_nav_menu(array(
+    //     "menu" => "bloc-archive",
+    //     "container" => "nav"
+    // ));
+    ?>
+    EN COMMENTAIRE POUR LEPREUVE FINALE
+</section> -->
+
 <section class="intro">
     <?php
      wp_nav_menu(array(
@@ -11,10 +26,6 @@
         "container" => "nav"
     ));
 
-    wp_nav_menu(array(
-        "menu" => "bloc-archive",
-        "container" => "nav"
-    ));
     ?>
 </section>
 

@@ -22,3 +22,7 @@
 .site-main-atelier .info p {
   border-top: 1px solid;
 }
+
+.intro .menu-atelier-container .menu .menu-item {
+  background-color: black;
+}

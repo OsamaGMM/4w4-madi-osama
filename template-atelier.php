@@ -9,7 +9,6 @@
 <?php get_header(); ?>
 <main class="site-main-atelier">
     <?php
-
     if (have_posts()) : the_post(); ?>
         <h1><?= get_the_title(); ?></h1>
         <?php the_content(); ?>
