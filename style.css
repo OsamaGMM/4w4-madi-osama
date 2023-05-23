@@ -728,6 +728,31 @@ a:hover:after {
   padding: 3px;
 }
 
+.site__aside-atelier {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 800px) {
+  .site__aside-atelier {
+    flex-direction: column;
+  }
+}
+.site__aside-atelier .menu-atelier-container .menu {
+  list-style: none;
+  padding: 0;
+}
+
+.site-main-atelier {
+  padding: 1rem;
+}
+.site-main-atelier .info {
+  border-bottom: 1px solid;
+}
+.site-main-atelier .info p {
+  border-top: 1px solid;
+}
+
 .site__header {
   grid-area: header;
 }

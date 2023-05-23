@@ -7,7 +7,7 @@
 ?>
 
 <?php get_header(); ?>
-<main class="site__main">
+<main class="site-main-atelier">
     <?php
 
     if (have_posts()) : the_post(); ?>
