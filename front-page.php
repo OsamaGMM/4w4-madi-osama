@@ -7,7 +7,7 @@
 <section class="intro">
     <?php
      wp_nav_menu(array(
-        "menu" => "evenement",
+        "menu" => "atelier",
         "container" => "nav"
     ));
 
